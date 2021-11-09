@@ -12,9 +12,9 @@ module.exports = async (req, res) => {
   const size = (await fs.promises.stat(path)).size;
 
   // parse range
-  const CHUNK = Math.pow(10, 6);
-  const start = Number(range.replace(/\D/g, ''));
-  const end = Math.min(start + CHUNK, size - 1);
+  const CHUNK = Math.pow(10, 6); // 1MB
+  const start = Number(range.replace(/\D/g, '')); // Remove spaces
+  const end = Math.min(start + CHUNK, size - 1); // Final byte
 
   // send headers to browser
   const length = end - start + 1;
