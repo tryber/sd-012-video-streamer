@@ -1,6 +1,6 @@
 const express = require('express');
-const home = require('./home');
-const stream = require('./stream');
+const home = require('./controller/home');
+const stream = require('./controller/stream');
 const process = require('process');
 
 const app = express();
