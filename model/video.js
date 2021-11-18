@@ -5,8 +5,8 @@ const getSize = async () => {
   return (await fs.promises.stat(PATH)).size; // model
 }
 
-const getStream = (streamOptions) => {
-  return fs.createReadStream(PATH, streamOptions); // model
+const getStream = (options) => {
+  return fs.createReadStream(PATH, options); // model
 }
 
 module.exports = {

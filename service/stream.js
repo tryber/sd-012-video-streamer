@@ -15,8 +15,8 @@ const intervalStats = async (range) => {
   }
 };
 
-const nextInterval = (end, start) => {
-  return model.getStream({ end, start });
+const nextInterval = (start, end) => {
+  return model.getStream({ start, end });
 }
 
 module.exports = {

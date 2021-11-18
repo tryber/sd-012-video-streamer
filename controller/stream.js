@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
 
   res.writeHead(206, headers);
 
-  const interval = service.nextInterval(stats.end, stats.start);
+  const interval = service.nextInterval(stats.start, stats.end);
 
   interval.pipe(res);
 };
