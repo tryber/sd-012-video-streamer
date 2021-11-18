@@ -1,4 +1,3 @@
-const fs = require('fs');
 const service = require('../service/stream');
 
 module.exports = async (req, res) => {
