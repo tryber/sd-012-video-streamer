@@ -4,7 +4,7 @@ const service = require('../service/stream');
 module.exports = async (req, res) => {
   const range = req.headers.range;
   if (!range) {
-    res.status(400).send('Requires range header');
+    return res.status(400).send('Requires range header');
   }
 
   const stats = await service.intervalStats(range);

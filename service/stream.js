@@ -5,8 +5,8 @@ const CHUNK = Math.pow(10, 6);
 const intervalStats = async (range) => {
   const size = await model.getSize();
 
-  const start = Number(range.replace(/\D/g, '')); // Remove spaces 
-  const end = Math.min(start + CHUNK, size - 1); // Final byte
+  const start = Number(range.replace(/\D/g, ''));
+  const end = Math.min(start + CHUNK, size - 1);
 
   return {
     size,
