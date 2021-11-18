@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
     res.status(400).send('Requires range header');
   }
 
-  const stats = await service.getStats(range);
+  const stats = await service.intervalStats(range);
   const headers = {
     'Content-Range': `bytes ${stats.start}-${stats.end}/${stats.size}`,
     'Accept-Encoding': 'bytes',

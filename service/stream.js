@@ -2,7 +2,7 @@ const model = require('../model/video');
 
 const CHUNK = Math.pow(10, 6);
 
-const getStats = async (range) => {
+const intervalStats = async (range) => {
   const size = await model.getSize();
 
   const start = Number(range.replace(/\D/g, '')); // Remove spaces 
@@ -20,6 +20,6 @@ const nextInterval = (end, start) => {
 }
 
 module.exports = {
-  getStats,
+  intervalStats,
   nextInterval,
 }
